@@ -5,63 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Raja Irfan Khan · Android/Flutter Engineer</title>
   <meta name="description" content="Portfolio of Raja Irfan Khan – Android developer (Kotlin/Java/Flutter). Projects, skills, experience, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg: #0b0f17; /* deep blue/black */
-      --card: #121826;
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
       --muted: #94a3b8;
-      --text: #e5e7eb;
-      --accent: #00e0a4; /* teal */
-      --accent2:#60a5fa; /* blue */
-      --border: rgba(148,163,184,0.18);
-      --chip: rgba(96,165,250,0.12);
+      --text: #f1f5f9;
+      --accent: #38bdf8; /* cyan */
+      --accent2: #f472b6; /* pink */
+      --border: rgba(148,163,184,0.2);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 10% -10%, rgba(96,165,250,0.10), transparent), radial-gradient(800px 400px at 120% 10%, rgba(16,185,129,0.09), transparent), var(--bg); color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
-    a{color:var(--accent2); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px; margin:0 auto; padding:28px 20px 80px}
-    header{display:flex; gap:22px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .brand{display:flex; gap:16px; align-items:center}
-    .avatar{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--accent2),var(--accent)); display:grid; place-items:center; color:#001b2e; font-weight:800; letter-spacing:0.5px}
-    .title h1{margin:0;font-size:clamp(20px, 4vw, 28px)}
-    .title p{margin:2px 0 0;color:var(--muted)}
-    nav{display:flex; gap:16px; flex-wrap:wrap}
-    nav a{background:rgba(255,255,255,0.04); border:1px solid var(--border); padding:10px 14px; border-radius:999px}
-    main{margin-top:32px; display:grid; grid-template-columns: 1.1fr 1fr; gap:24px}
-    @media (max-width: 980px){ main{grid-template-columns: 1fr} }
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid var(--border); border-radius:20px; padding:20px}
-    h2{margin:0 0 14px; font-size:20px}
-    .chips{display:flex; flex-wrap:wrap; gap:10px}
-    .chip{padding:8px 11px; border-radius:999px; border:1px solid var(--border); background:var(--chip); color:#cde3ff; font-size:13px}
-    .grid{display:grid; gap:14px}
-    .timeline{display:grid; gap:14px}
-    .item{padding:16px;border:1px solid var(--border);border-radius:16px;background:rgba(2,6,23,0.35)}
-    .item h3{margin:0 0 6px; font-size:16px}
-    .muted{color:var(--muted); font-size:14px}
-    .proj{display:grid; gap:10px}
-    .proj a.btn{display:inline-block; padding:8px 12px; border:1px solid var(--border); border-radius:10px; background:rgba(255,255,255,0.04)}
-    footer{margin-top:36px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap}
-    .cta{display:flex; gap:10px; flex-wrap:wrap}
-    .cta a{background:linear-gradient(135deg, var(--accent2), var(--accent)); padding:10px 14px; color:#001b2e; border-radius:12px; font-weight:700}
-    .line{height:1px; background:var(--border); margin:24px 0}
-    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    @media (max-width:700px){.two-col{grid-template-columns:1fr}}
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; 
+      font-family: 'Inter', sans-serif; 
+      background: linear-gradient(120deg, #0f172a, #1e293b);
+      color: var(--text);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent2); }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+    /* Header */
+    header { text-align: center; margin-bottom: 40px; }
+    header img {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      box-shadow: 0 0 20px var(--accent2);
+    }
+    header h1 { margin: 16px 0 8px; font-size: 28px; }
+    header p { margin: 0; color: var(--muted); font-size: 16px; }
+    nav { margin-top: 20px; }
+    nav a {
+      margin: 0 10px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: all .3s;
+    }
+    nav a:hover { background: var(--accent); color: #0f172a; }
+
+    /* Sections */
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+    h2 { margin-top: 0; font-size: 22px; }
+
+    /* Project cards */
+    .projects { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .project {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform .3s;
+    }
+    .project:hover { transform: translateY(-5px); }
+    .project img { width: 100%; height: 180px; object-fit: cover; }
+    .project .content { padding: 14px; }
+    .project h3 { margin: 0 0 6px; font-size: 18px; }
+    .project p { font-size: 14px; color: var(--muted); }
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #0f172a;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .btn:hover { background: var(--accent2); }
+
+    footer { text-align: center; margin-top: 40px; color: var(--muted); font-size: 14px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <div class="avatar">RK</div>
-        <div class="title">
-          <h1>Raja Irfan Khan</h1>
-          <p>Sr. Android Developer — Kotlin · Java · MVVM · REST · Firebase</p>
-        </div>
-      </div>
+      <img src="profile.jpg" alt="Profile Photo">
+      <h1>Raja Irfan Khan</h1>
+      <p>Sr. Android Developer — Kotlin · Java · Flutter · Firebase</p>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -71,141 +105,55 @@
       </nav>
     </header>
 
-    <main>
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p>Analytical and detail‑oriented Android developer with 3.5–4 years experience building large‑scale e‑commerce, utilities, and content apps. Comfortable across Kotlin/Java, MVVM, coroutines/Flow, Retrofit, Room, Firebase/FCM, and modern Android tooling. Passionate about crisp UX, resilient networking, and offline‑first data.</p>
-        <div class="line"></div>
-        <div class="two-col">
-          <div>
-            <p class="muted">Based in Islamabad, Pakistan</p>
-            <p class="muted">Open to remote & KSA opportunities</p>
-          </div>
-          <div class="cta">
-            <a href="#contact">Contact Me</a>
-            <a href="#projects" style="background:transparent;border:1px solid var(--border);color:var(--text)">See Work</a>
-          </div>
-        </div>
-      </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>Detail-oriented Android developer with 4+ years of experience building apps in e-commerce, utilities, and content. Skilled in Kotlin, Java, Flutter, MVVM, Retrofit, Room, Firebase/FCM, and modern Android tooling. Passionate about clean UX and scalable mobile apps.</p>
+    </section>
 
-      <section id="skills" class="card">
-        <h2>Core Skills</h2>
-        <div class="chips">
-          <span class="chip">Kotlin</span>
-          <span class="chip">Java</span>
-          <span class="chip">Android SDK</span>
-          <span class="chip">MVVM</span>
-          <span class="chip">Coroutines · Flow</span>
-          <span class="chip">Hilt DI</span>
-          <span class="chip">Jetpack (LiveData/ViewModel)</span>
-          <span class="chip">Room / SQLite</span>
-          <span class="chip">Retrofit · REST/JSON</span>
-          <span class="chip">Firebase · FCM</span>
-          <span class="chip">Mapbox</span>
-          <span class="chip">Git</span>
-          <span class="chip">Compose (basic)</span>
-        </div>
-      </section>
-
-      <section id="experience" class="card">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="item">
-            <h3>Sr. Android Developer · Cooperative Tech (Jan 2024 – Present)</h3>
-            <p class="muted">Feature ownership, architecture, performance, code reviews, release automation.</p>
-          </div>
-          <div class="item">
-            <h3>Android Developer · Gamicans (Dec 2022 – Jan 2024)</h3>
-            <p class="muted">MVVM apps at scale, REST integrations, Firebase, in‑app purchases & ads.</p>
-          </div>
-          <div class="item">
-            <h3>Jr. Android Developer · Peek International (Nov 2021 – Nov 2022)</h3>
-            <p class="muted">Built and shipped multiple consumer apps, triaged crashes, improved UI/UX.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="card">
-        <h2>Selected Projects</h2>
-        <div class="grid">
-          <div class="item proj">
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="images/jobhub.jpg" alt="JobHub">
+          <div class="content">
             <h3>JobHub (User / Pro / Driver)</h3>
-            <p class="muted">Job marketplace with search, filters, real‑time updates, and push notifications.</p>
-            <div>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.buzzware.fasojobsuser" target="_blank" rel="noopener">Play Store (User)</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.buzzware.fasojobs" target="_blank" rel="noopener">Play Store (Pro)</a>
-            </div>
+            <p>Job marketplace with search, filters, real-time updates, and push notifications.</p>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.buzzware.fasojobsuser" target="_blank">Play Store</a>
           </div>
-          <div class="item proj">
+        </div>
+        <div class="project">
+          <img src="images/pakistanpost.jpg" alt="Pakistan Post">
+          <div class="content">
             <h3>Pakistan Post Delivery</h3>
-            <p class="muted">Post management: bag/article creation, agent assignment, delivery sheet, tracking.</p>
+            <p>Post management system: bag/article creation, agent assignment, delivery sheet, tracking.</p>
           </div>
-          <div class="item proj">
-            <h3>Money Market</h3>
-            <p class="muted">Real‑time currency rates with API integration, clean UI, and offline cache.</p>
-          </div>
-          <div class="item proj">
+        </div>
+        <div class="project">
+          <img src="images/snapstudio.jpg" alt="Photo Editor">
+          <div class="content">
             <h3>Photo Editor / Snap Studio</h3>
-            <p class="muted">Filters, effects, collage maker; optimized rendering and smooth UX.</p>
-          </div>
-          <div class="item proj">
-            <h3>All Recover Deleted Messages</h3>
-            <p class="muted">Local backups via Room DB; seamless restore and privacy‑first design.</p>
-          </div>
-          <div class="item proj">
-            <h3>City Vibes · Events</h3>
-            <p class="muted">Location‑based event discovery with Firebase + backend API.</p>
-          </div>
-          <div class="item proj">
-            <h3>Document Scanner</h3>
-            <p class="muted">Scan to PDF, merge/split, image enhancement; fast on‑device processing.</p>
-          </div>
-          <div class="item proj">
-            <h3>Quran for You / Quran Pak</h3>
-            <p class="muted">Prayer times, Qibla, Zikr & Azkar; FCM notifications and personalization.</p>
-          </div>
-          <div class="item proj">
-            <h3>TV Remote & Cast Pro</h3>
-            <p class="muted">Wi‑Fi remote, DLNA/AirPlay casting, bandwidth‑aware streaming.</p>
-          </div>
-          <div class="item proj">
-            <h3>More</h3>
-            <p class="muted">Auto Clicker · Joberis · Offline Quotes · YahLove · WatsScan · Dynamic Island · QR Scanner · Nepali Keyboard · Photo Slide Show.</p>
-            <a class="btn" href="https://jobee.io/profile/irfan997" target="_blank" rel="noopener">Full portfolio</a>
+            <p>Filters, effects, collage maker; optimized rendering and smooth UX.</p>
           </div>
         </div>
-      </section>
+        <!-- Add more project cards the same way -->
+      </div>
+      <p style="margin-top:16px;">See full portfolio on <a href="https://jobee.io/profile/irfan997" target="_blank">Jobee.io</a></p>
+    </section>
 
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <div class="grid">
-          <div class="item">
-            <h3>Email</h3>
-            <p><a href="mailto:irfans.officialwork@gmail.com">irfans.officialwork@gmail.com</a></p>
-          </div>
-          <div class="item">
-            <h3>Phone</h3>
-            <p><a href="tel:+923045532997">+92 304 553 2997</a></p>
-          </div>
-          <div class="item">
-            <h3>Location</h3>
-            <p class="muted">Islamabad, Pakistan</p>
-          </div>
-        </div>
-      </section>
-    </main>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:irfans.officialwork@gmail.com">irfans.officialwork@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923045532997">+92 304 553 2997</a></p>
+      <p>Location: Islamabad, Pakistan</p>
+    </section>
 
     <footer>
-      <p class="muted">© <span id="y"></span> Raja Irfan Khan</p>
-      <div class="cta">
-        <a href="#">Back to top ↑</a>
-      </div>
+      © <span id="year"></span> Raja Irfan Khan
     </footer>
   </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
